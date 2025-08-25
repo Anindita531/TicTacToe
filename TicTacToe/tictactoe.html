@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe</title>
+<link rel="stylesheet" href="tictactoe.css">
+</head>
+<body>
+
+<marquee behavior="scroll" direction="right" class="marquee">Tic-Tac-Toe</marquee>
+
+<div class="container">
+    <h1>Tic-Tac-Toe</h1>
+
+    <div class="options">
+        <button onclick="startGame('friend')">Play with Friend</button>
+        <button onclick="startGame('computer')">Play with Computer</button>
+    </div>
+
+    <div id="playerNames" class="player-inputs" style="display:none;">
+        <input type="text" id="player1Name" placeholder="Player 1 Name" class="player-input">
+        <input type="text" id="player2Name" placeholder="Player 2 Name" class="player-input">
+        <button onclick="startTwoPlayerGame()" class="start-btn">Start Game</button>
+    </div>
+
+    <div id="board" class="board" style="display:none;">
+        <div class="cell" onclick="handleMove(0)"></div>
+        <div class="cell" onclick="handleMove(1)"></div>
+        <div class="cell" onclick="handleMove(2)"></div>
+        <div class="cell" onclick="handleMove(3)"></div>
+        <div class="cell" onclick="handleMove(4)"></div>
+        <div class="cell" onclick="handleMove(5)"></div>
+        <div class="cell" onclick="handleMove(6)"></div>
+        <div class="cell" onclick="handleMove(7)"></div>
+        <div class="cell" onclick="handleMove(8)"></div>
+    </div>
+
+    <div id="message" class="message"></div>
+    <button id="replayBtn" onclick="resetGame()">Replay</button>
+
+    <div id="popup" class="popup">
+        <span class="popup-content">Game Over!</span>
+        <button class="closeBtn" onclick="closePopup()">Close</button>
+    </div>
+
+    <div id="winnerBox" class="winner-box"></div>
+</div>
+
+<script src="tictactoe.js"></script>
+</body>
+</html>
